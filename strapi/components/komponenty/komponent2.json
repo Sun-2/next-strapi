@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_komponenty_komponent2s",
+  "info": {
+    "name": "Komponent2",
+    "icon": "adjust"
+  },
+  "options": {},
+  "attributes": {
+    "time": {
+      "type": "enumeration",
+      "enum": [
+        "morning",
+        "noon",
+        "evening"
+      ]
+    }
+  }
+}
