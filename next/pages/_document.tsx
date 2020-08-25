@@ -1,6 +1,8 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 import React from "react";
+import { dark } from "../themes/dark";
+import { themes } from "../themes";
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -33,9 +35,23 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet"/>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            (() => {
+              const theme = window.localStorage.getItem("theme");
+              const themes = ${JSON.stringify(themes)};
+              if(theme && themes[theme]) document.children[0].style.backgroundColor = themes[theme].palette.background.body;
+            })();
+          `,
+            }}
+          />
           <Main />
           <NextScript />
         </body>

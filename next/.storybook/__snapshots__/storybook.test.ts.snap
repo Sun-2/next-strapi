@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Example/asd Compo 1`] = `
+<p>
+  Hellsoasd!
+</p>
+`;
+
+exports[`Storyshots MyNamespace/Something Green 1`] = `
+<div
+  className="css-1csv9p4"
+>
+  MyComponent
+</div>
+`;
+
+exports[`Storyshots MyNamespace/Something Red 1`] = `
+<div
+  className="css-gugpi7"
+>
+  MyComponent
+</div>
+`;
+
+exports[`Storyshots MyNamespace/Something Something 1`] = `
+<div
+  className="css-gugpi7"
+>
+  MyComponent
+</div>
+`;
